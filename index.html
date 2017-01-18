@@ -4,15 +4,28 @@
 	<meta charset="UTF-8">
 	<title>Wide World Travel</title>
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="/lib/bower_components/materialize/dist/css/materialize.css">
 </head>
 <body ng-app="TravelGuides">
 
 <div ng-controller="bookCtrl">
-<h1>Guides!</h1>
+<h1 class="center-align">Guides!</h1>
+
+<div class="container">
+	<div class="row">
+		<div class="col l4 m6 s12" ng-repeat="book in books">
+			<h5>{{book.title}}</h5>
+			<p>{{book.type}}</p>
+			<p>{{book.price}}</p>
+		</div>
+	</div>
+</div>
 </div>
 
 <script src="lib/bower_components/angular/angular.js"></script>
 <script src="lib/bower_components/angular-route/angular-route.js"></script>
+<script src="/lib/bower_components/jquery/dist/jquery.js"></script>
+<script src="/lib/bower_components/materialize/dist/js/materialize.js"></script>
 <script src="app/app.js"></script>
 <script src="app/config.js"></script>
 <script src="app/controllers/bookCtrl.js"></script>
